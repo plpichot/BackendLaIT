@@ -4,7 +4,7 @@ const neo4jsettings = {
   password: 'Gazda11Od22Lait33',
 };
 
-const saveData = 'backend/Data';
+const saveData = 'Data';
 
 module.exports = {
   neo4jsettings,
