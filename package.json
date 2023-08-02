@@ -12,7 +12,7 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "build": "babel src --out-dir dist"
+    "build": "babel src -d dist"
   },
   "dependencies": {
     "@babel/plugin-syntax-decorators": "^7.22.5",
@@ -26,11 +26,11 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
-    "@babel/core": "7.21.3",
+    "@babel/core": "^7.21.3",
     "@babel/node": "7.20.7",
-    "@babel/plugin-proposal-decorators": "7.21.0",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
     "@babel/plugin-transform-runtime": "7.21.0",
-    "@babel/preset-env": "7.20.2",
+    "@babel/preset-env": "^7.20.2",
     "@babel/register": "7.21.0",
     "@babel/runtime": "7.21.0",
     "@nestjs/testing": "^9.0.0",
