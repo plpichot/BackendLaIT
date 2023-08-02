@@ -14,16 +14,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     httpsOptions,
   });*/
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
 
   app.use(express.json({ limit: '10mb' }));
-  // Configurer CORS
-  app.enableCors({
-    origin: 'http://192.168.10.160:5173',
-    allowedHeaders: 'Content-Type, Authorization',
-    methods: 'GET, POST, PUT, DELETE',
-  });
-  
   await app.listen(3000)
 }
 bootstrap();
