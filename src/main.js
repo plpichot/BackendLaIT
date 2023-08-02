@@ -19,7 +19,7 @@ async function bootstrap() {
   app.use(express.json({ limit: '10mb' }));
   // Configurer CORS
   app.enableCors({
-    origin: 'http://localhost:5173',
+    origin: 'http://192.168.10.160:5173',
     allowedHeaders: 'Content-Type, Authorization',
     methods: 'GET, POST, PUT, DELETE',
   });

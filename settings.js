@@ -1,12 +1,10 @@
-const neo4j = require('neo4j-driver');
-
 const neo4jsettings = {
-  uri: 'neo4j://localhost:7687',
+  uri: 'neo4j://212.235.190.210:7687',
   user: 'neo4j',
-  password: 'password',
+  password: 'Gazda11Od22Lait33',
 };
 
-const saveData = '/Users/plpichot/Desktop/backend/Data';
+const saveData = 'backend/Data';
 
 module.exports = {
   neo4jsettings,
