@@ -342,7 +342,7 @@ export class Experiment {
         ON CREATE SET d.Description = deviceData.Description, d.SampleTime = deviceData.SampleTime
         CREATE (e)-[:USES]->(d)
         FOREACH (sensorData IN deviceData.sensors |
-          MATCH (st:SensorType {Name: sensorData.Type})
+          MERGE (st:SensorType {Name: sensorData.Type})
           MERGE (d)-[:INCLUDES]->(s:Sensor {ID: sensorData.ID})-[:IS]->(st)
           ON CREATE SET s.BitDepth = sensorData.BitDepth, s.Range = sensorData.Range
         )
