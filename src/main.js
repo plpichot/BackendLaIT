@@ -11,6 +11,6 @@ async function bootstrap() {
     allowedHeaders: 'Content-Type, Accept',
   });
   app.use(express.json({ limit: '10mb' }));
-  await app.listen(3000)
+  await app.listen(3000);
 }
 bootstrap();

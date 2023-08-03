@@ -337,7 +337,7 @@ export class Experiment {
       `MATCH (a:Activity {Name: $ActivityName})
       CREATE (e:Experiment {Name: $ExperimentName, Instructions: $Instructions, CustomFields: $CustomFields})-[:IS]->(a)
       FOREACH (deviceData IN $devicesData |
-        MATCH (t:DeviceType {Name: deviceData.Type})
+        MERGE (t:DeviceType {Name: deviceData.Type})
         MERGE (d:Device {ID: deviceData.ID})-[:IS]->(t)
         ON CREATE SET d.Description = deviceData.Description, d.SampleTime = deviceData.SampleTime
         CREATE (e)-[:USES]->(d)
