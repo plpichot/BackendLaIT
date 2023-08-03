@@ -134,21 +134,4 @@ export class User {
       throw error;
     }
   }
-  
-  async deleteUserByID(params) {
-    // Find a user with his ID and delete him
-
-    const ID = params;
-
-    const session = driver.session();
-  
-    try {
-      await session.run('MATCH (u:User {ID: $ID}) DELETE u', { ID });
-      session.close();
-      return ('node deleted');
-    } catch (error) {
-      session.close();
-      throw error;
-    }
-  }
 }

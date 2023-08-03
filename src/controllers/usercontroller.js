@@ -49,10 +49,4 @@ export class UserController {
     this.user.updateUserByID(params.id,request);
     return response.status(200).json({ success: true });
   }
-
-  @Delete(':id')
-  @Bind(Param())
-  deleteUserByID(params) {
-    return this.user.deleteUserByID(params.id);
-  }
 }
