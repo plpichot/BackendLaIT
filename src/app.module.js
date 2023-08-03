@@ -21,10 +21,10 @@ const { Sensor } = require('./models/sensor');
 const { SensorController } = require('./controllers/sensorcontroller');
 const { SensorSignal } = require('./models/sensorsignal');
 const { SensorSignalController } = require('./controllers/sensorsignalcontroller');
-const { ConfigModule } = require('@nestjs/config');
+//const { ConfigModule } = require('@nestjs/config');
 
 @Module({
-  imports: [ConfigModule.forRoot()],
+  imports: [], //ConfigModule.forRoot()
   controllers: [UserController,SubjectController,SubjectPropertiesController,MeasurementController,SensorTypeController,
   ActivityController,DeviceTypeController,ExperimentController,DeviceController,SensorController,SensorSignalController],
   providers: [User,Subject,SubjectProperties,Measurement,SensorType,Activity,DeviceType,Experiment,Device,Sensor,SensorSignal],
