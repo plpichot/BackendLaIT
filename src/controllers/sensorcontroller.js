@@ -1,7 +1,7 @@
 const { Controller,Dependencies, Post,Put, Param, Get, Delete, Bind, Req, Res } = require('@nestjs/common');
 const { Sensor } = require('../models/sensor');
 
-@Controller('sensor')
+@Controller('api/sensor')
 @Dependencies(Sensor)
 export class SensorController {
   constructor(Sensor) {
